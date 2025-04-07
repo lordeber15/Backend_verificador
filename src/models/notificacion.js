@@ -11,8 +11,16 @@ const Notificacion = sequelize.define("notificacion", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  content: {
+  nombre: {
     type: DataTypes.STRING,
+    allowNull: false,
+  },
+  monto: {
+    type: DataTypes.DECIMAL,
+    allowNull: false,
+  },
+  codigoseg: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
 });

@@ -5,12 +5,12 @@ const port = process.env.DB_PORT || 3000;
 async function main() {
   try {
     await sequelize.sync({ force: false });
-    console.log("ya estassssss");
+    console.log("Coneccion Exitosa");
     app.listen(port, () => {
-      console.log("listening on port", port);
+      console.log("Escuhando por el puerto", port);
     });
   } catch (error) {
-    console.error("nooooo la cagaste", error);
+    console.error("Tienes un Error de conexion revisa estos posibles problemas", error);
   }
 }
 
