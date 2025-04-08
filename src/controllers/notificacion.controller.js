@@ -11,12 +11,13 @@ const getNotification = async (req, res) => {
 
 const createNotification = async (req, res) => {
   try {
-    const { title, nombre , monto, codigoseg } = req.body;
+    const { title, packageName, nombre, monto, codigoseg } = req.body;
     const newNotification = await Notificacion.create({
       title,
+      packageName,
       nombre,
       monto,
-      codigoseg
+      codigoseg,
     });
     res.json(newNotification);
   } catch (error) {
